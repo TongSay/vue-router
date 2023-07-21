@@ -1,0 +1,29 @@
+<template>
+    <h1>Jobs</h1>
+    <div v-for="job in jobs" :key="job.id">
+        <router-link :to="{ name: 'JobDetails', params: {id:job.id} }">
+        <h2>{{ job.titile }}</h2>
+
+        </router-link>
+    </div>
+</template>
+
+<script>
+    export default {
+        data() {
+            return {
+                jobs: [
+                    { titile: 'Ninja UX Designer', id:1, details: 'lorem' },
+                    { titile: 'Ninja Web Developer', id:2, details: 'lorem' },
+                    { titile: 'Ninja Vue Developer', id:3, details: 'lorem' },
+                ]
+            }
+        }
+    }
+
+</script>
+
+<style>
+
+
+</style>
